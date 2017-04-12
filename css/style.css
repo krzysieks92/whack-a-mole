@@ -13,7 +13,7 @@ html {
 body {
   padding: 0;
   margin:0;
-  font-family: 'Amatic SC', cursive;
+  /*font-family: 'Amatic SC', cursive;*/
   text-align: center;
   min-width: 620px;
 }
