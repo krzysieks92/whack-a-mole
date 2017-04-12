@@ -173,7 +173,7 @@ h1 {
 
 .hole:after {
   display: block;
-  background: url('https://github.com/krzysieks92/whack-a-mole/blob/master/dirt.svg') bottom center no-repeat;
+  background: url('../dirt.svg') bottom center no-repeat;
   background-size:contain;
   content:'';
   width: 100%;
@@ -184,7 +184,7 @@ h1 {
 }
 
 .mole {
-  background:url('https://github.com/krzysieks92/whack-a-mole/blob/master/mole.svg') bottom center no-repeat;
+  background:url('../mole.svg') bottom center no-repeat;
   background-size:60%;
   position: absolute;
   top: 100%;
