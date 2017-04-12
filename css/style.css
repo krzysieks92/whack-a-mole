@@ -1,7 +1,7 @@
 html {
 	box-sizing: border-box;
 	font-size: 10px;
-	background: /*#89ca12*/black;
+	background: #89ca12;
 	z-index: 1;
 	text-align: center;
 }
@@ -13,7 +13,7 @@ html {
 body {
   padding: 0;
   margin:0;
-  /*font-family: 'Amatic SC', cursive;*/
+  font-family: 'Amatic SC', cursive;
   text-align: center;
   min-width: 620px;
 }
@@ -173,7 +173,7 @@ h1 {
 
 .hole:after {
   display: block;
-  background-image: url('../dirt.svg') bottom center no-repeat;
+  background-image: url('dirt.svg') bottom center no-repeat;
   background-size:contain;
   content:'';
   width: 100%;
@@ -184,7 +184,7 @@ h1 {
 }
 
 .mole {
-  background-image:url('../mole.svg') bottom center no-repeat;
+  background-image:url('mole.svg') bottom center no-repeat;
   background-size:60%;
   position: absolute;
   top: 100%;
