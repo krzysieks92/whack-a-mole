@@ -1,0 +1,373 @@
+html {
+	box-sizing: border-box;
+	font-size: 10px;
+	background: #89ca12;
+	z-index: 1;
+	text-align: center;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  padding: 0;
+  margin:0;
+  font-family: 'Amatic SC', cursive;
+  text-align: center;
+  min-width: 620px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 6rem;
+  line-height:1;
+  margin-bottom: 0;
+}
+
+.btn {
+	background: #44d135;
+	background: -moz-linear-gradient(top, #80ec75 0%, #43d034 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#80ec75), color-stop(100%,#43d034)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #80ec75 0%,#43d034 100%); /* Chrome10+,Safari5.1+ */
+	background: linear-gradient(top, #80ec75 0%,#43d034 100%); /* W3C */
+	-webkit-border-radius: 28;
+	-moz-border-radius: 28;
+	border-radius: 28px;
+	font-family: 'Amatic SC', cursive;
+	font-weight: bold;
+	color: #000000;
+	font-size: 30px;
+	padding: 10px 20px 10px 20px;
+	text-decoration: none;
+	outline: none;
+	margin: 0 auto;
+}
+
+.btn:hover {
+	background: #43d034; /* Old browsers */
+	background: -moz-linear-gradient(top, #43d034 0%, #67e45c 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#43d034), color-stop(100%,#67e45c)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #43d034 0%,#67e45c 100%); /* Chrome10+,Safari5.1+ */
+	background: linear-gradient(top, #43d034 0%,#67e45c 100%); /* W3C */
+	text-decoration: none;
+	cursor: pointer;
+}
+
+/*przycisk rozpocznij gre*/
+.new-game {
+	font-weight: bold;
+	height: 150px;
+	width: 300px;
+	cursor: pointer;
+	margin: 50px auto;
+}
+.new-game .outer {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	padding: 10px;
+	background: rgba(0,0,0,0.65);
+	border-radius: 14px;
+	-webkit-border-radius: 14px;
+	-moz-border-radius: 14px;
+	box-shadow: inset rgba(0,0,0,0.85) 0px 1px 5px;
+	-webkit-box-shadow: inset rgba(0,0,0,0.85) 0px 1px 5px;
+	-moz-box-shadow: inset rgba(0,0,0,0.85) 0px 1px 5px;
+	-webkit-transform: perspective(500px) rotateX(35deg);
+	-moz-transform: perspective(500px) rotateX(35deg);
+}
+.new-game .outer .height {
+	position: relative;
+	height: 100%;
+	margin-top: -15px;
+	padding-bottom: 15px;
+	background: #39a02d;
+	border-radius: 16px;
+	-webkit-border-radius: 16px;
+	-moz-border-radius: 16px;
+	box-shadow: rgba(0,0,0,0.85) 0px 1px 1px, inset rgba(0,0,0,0.35) 0px -2px 8px;
+	-webkit-box-shadow: rgba(0,0,0,0.85) 0px 1px 1px, inset rgba(0,0,0,0.35) 0px -2px 8px;
+	-moz-box-shadow: rgba(0,0,0,0.85) 0px 1px 1px, inset rgba(0,0,0,0.35) 0px -2px 8px;
+	-webkit-transition: all 0.1s ease-in-out;
+	-moz-transition: all 0.1s ease-in-out;
+}       
+.new-game:hover .outer .height {
+	margin-top: -10px;
+	padding-bottom: 10px;
+	background: #3aaf2d;
+	box-shadow: rgba(0,0,0,0.25) 0px 1px 1px, inset rgba(0,0,0,0.35) 0px -2px 6px;
+	-webkit-box-shadow: rgba(0,0,0,0.25) 0px 1px 1px, inset rgba(0,0,0,0.35) 0px -2px 6px;
+	-moz-box-shadow: rgba( 0,0,0,0.25) 0px 1px 1px, inset rgba(0,0,0,0.35) 0px -2px 6px;
+}
+.new-game:active .outer .height {
+	margin-top: 0px;
+	padding-bottom: 0px;
+}
+.new-game .outer .height .inner {
+	line-height: 2.8em;
+	font-size: 50px;
+	letter-spacing: .05em;
+	position: relative;
+	height: 100%;
+	text-align: center;
+	text-shadow: #8aff7b 0px 0px 1px;
+	background: #44d135;
+	background: -moz-linear-gradient(top, #80ec75 0%, #43d034 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#80ec75), color-stop(100%,#43d034)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #80ec75 0%,#43d034 100%); /* Chrome10+,Safari5.1+ */
+	background: linear-gradient(top, #80ec75 0%,#43d034 100%); /* W3C */
+	border-radius: 12px;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	box-shadow: inset rgba(255,255,255,0.85) 0px 0px 1px;
+	-webkit-box-shadow: inset rgba(255,255,255,0.85) 0px 0px 1px;
+	-moz-box-shadow: inset rgba(255,255,255,0.85) 0px 0px 1px;
+	-webkit-transition: all 0.1s ease-in-out;
+	-moz-transition: all 0.1s ease-in-out;
+}
+.new-game:hover .outer .height .inner{
+	text-shadow: #99f48d 0px 0px 1px;
+	background: #43d034; /* Old browsers */
+	background: -moz-linear-gradient(top, #43d034 0%, #67e45c 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#43d034), color-stop(100%,#67e45c)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #43d034 0%,#67e45c 100%); /* Chrome10+,Safari5.1+ */
+	background: linear-gradient(top, #43d034 0%,#67e45c 100%); /* W3C */
+}
+.new-game:active .outer .height .inner{
+	text-shadow: #319926 0px 1px 0px;
+	border-radius: 16px;
+	-webkit-border-radius: 16px;
+	-moz-border-radius: 16px;
+	box-shadow: inset rgba(0,0,0,0.9) 0px 0px 8px;
+	-webkit-box-shadow: inset rgba(0,0,0,0.9) 0px 0px 8px;
+	-moz-box-shadow: inset rgba(0,0,0,0.9) 0px 0px 8px;
+	background: #1d7d12; /* Old browsers */
+	background: -moz-linear-gradient(top, #1d7d12 0%, #4fd342 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1d7d12), color-stop(100%,#4fd342)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #1d7d12 0%,#4fd342 100%); /* Chrome10+,Safari5.1+ */
+	background: linear-gradient(top, #1d7d12 0%,#4fd342 100%); /* W3C */
+}
+
+.score {
+	background:rgba(255,255,255,0.2);
+	padding:0 3rem;
+	line-height:1;
+	border-radius:1rem;
+	display: none;
+}
+
+.game {
+  width:600px;
+  height:400px;
+  display:none;
+  flex-wrap:wrap;
+  margin:0 auto;
+}
+
+.hole {
+  flex: 1 0 33.33%;
+  overflow: hidden;
+  position: relative;
+}
+
+.hole:after {
+  display: block;
+  background: url('img/dirt.svg') bottom center no-repeat;
+  background-size:contain;
+  content:'';
+  width: 100%;
+  height:70px;
+  position: absolute;
+  z-index: 2;
+  bottom:-30px;
+}
+
+.mole {
+  background:url('C:/Users/Toshiba/Desktop/wd/javascript/javascript30/molegame - Kopia (2)/img/mole.svg') bottom center no-repeat;
+  background-size:60%;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: 100%;
+  transition:all 0.4s;
+}
+
+.hole.up .mole {
+  top:0;
+}
+
+/*pierwsze okienko modal z polem do wpisania imienia gracza*/
+.modal-content {
+	display: none;
+	z-index: 1000;
+	position: relative;
+	background-color: #fefefe;
+	font-size: 3em;
+	text-align: center;
+	margin: 50px auto;
+	padding: 0;
+	border: 1px solid #888;
+	width: 80%;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+	-webkit-animation-name: animatetop;
+	-webkit-animation-duration: 0.4s;
+	animation-name: animatetop;
+	animation-duration: 0.4s
+}
+
+/* dodanie animaji */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: #ffffff;
+	margin: 0;
+}
+
+.modal-body {
+	padding: 2px 16px;
+	line-height: 5em;
+	margin: 0;
+	text-align: center;
+}
+
+.player-name{
+	width: 100%;
+	font-family: 'Amatic SC', cursive;
+	font-weight: bold;
+	font-size: 2em;
+	text-align: center;
+}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: #ffffff;
+	margin: 0;
+}
+
+/*drugie okienko modal z aktualnym wynikiem gracza*/
+.modal-two{
+	display: none;
+	position: fixed;
+	z-index: 1000;
+	padding-top: 100px; 
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	background-color: rgb(0,0,0); 
+	background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content-two {
+	display: none;
+	position: relative;
+	background-color: #fefefe;
+	font-size: 3em;
+	text-align: center;
+	margin: 50px auto;
+	padding: 0;
+	border: 1px solid #888;
+	width: 80%;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+	-webkit-animation-name: animatetop;
+	-webkit-animation-duration: 0.4s;
+	animation-name: animatetop;
+	animation-duration: 0.4s
+}
+
+.modal-header-two {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: #ffffff;
+}
+
+.modal-body-two {
+	padding: 2px 16px;
+	line-height: 1em;
+}
+
+.player-name-two{
+	font-size: 2em;
+}
+
+.modal-footer-two {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: #ffffff;
+}
+
+/*trzecie okienko modal z tabela wynikow*/
+.modal-header-results {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: #ffffff;
+	margin: 0;
+}
+
+.modal-content-results {
+	display: none;
+	width: 80vw;
+	height: 80%;
+	z-index: 10000;
+	position: relative;
+	top: 0;
+	background-color: #fefefe;
+	font-size: 3em;
+	text-align: center;
+	margin: 3% 10vw;
+	padding: 0;
+	border: 1px solid #888;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+	-webkit-animation-name: animatetop;
+	-webkit-animation-duration: 0.4s;
+	animation-name: animatetop;
+	animation-duration: 0.4s;
+}
+
+.modal-body-results {
+	padding: 2px 16px;
+	margin: 0;
+	text-align: center;
+}
+
+.results-table{
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 50%;
+	border: 1px solid #ddd;
+	font-size: 2.5rem;
+	margin: 0 auto;
+}
+
+.modal-footer-results {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: #ffffff;
+	margin: 0;
+}
+
+td, tr{
+	border: none;
+	text-align: center;
+	padding: 8px;
+	line-height: 2;
+}
+
+tr:nth-child(even){
+	background-color: #f2f2f2;
+}
