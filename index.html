@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+<head>
+
+	<meta charset="utf-8" />
+	<meta charset="UTF-8">
+	<meta name="description" content="Whack A Mole!">
+	<meta name="keywords" content="Whack A Mole!">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+	<title>Whack A Mole!</title>
+	<link href='https://fonts.googleapis.com/css?family=Amatic+SC:400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/style.css">
+	
+</head>
+
+<body onload="init()">
+
+	<audio class="whack-sound" src="sounds/whack.mp3" type="audio/mp3" ></audio>
+	<audio class="fanfares-sound" src="sounds/fanfares.wav" type="audio/mp3" ></audio>
+
+	<h1>Whack-a-mole! <span class="score">0</span></h1>
+	<h1>Witaj <span class="type"></span></h1>
+
+	<div class="new-game"><div class="outer"><div class="height"><div class="inner">Rozpocznij grę</div></div></div></div>
+	
+	<div class="modal-content modal">
+		<div class="modal-header">
+			<h2>Podaj swoje imię</h2>
+		</div>
+		<div class="modal-body">
+			<input type="text" class="player-name" maxlength="20" autofocus>
+		</div>
+		<div class="modal-footer">
+			<button class="start btn">Start!</button>
+			<button class="exit btn">Wyjdź z gry</button>
+		</div>
+	</div>
+
+	<div class="modal-content-two modal">
+		<div class="modal-header-two">
+			<h2>Twój wynik</h2>
+		</div>
+		<div class="modal-body-two">
+			<p class="result"></p>
+		</div>
+		<div class="modal-footer-two">
+			<button class="more btn">Jeszcze raz!</button>
+			<button class="save btn" onclick="resultsDisplay(), saveOnClick()">Zapisz wynik</button>
+			<button class="exit btn">Wyjdź z gry</button>
+		</div>
+	</div>
+
+	<div class="modal-content-results modal">
+		<div class="modal-header-results">
+			<h2>Wyniki</h2>
+		</div>
+		<div class="modal-body-results" style="overflow-y:auto; height: 60vh;">
+			<table class="results-table">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Score</th>
+					</tr>
+				</thead>
+				<tbody>
+				</tbody>
+			</table>
+		</div>
+		<div class="modal-footer-results">
+			<button class="new-game-results btn">Nowa gra</button>
+			<button class="exit btn">Wyjdź z gry</button>
+		</div>
+	</div>
+
+	<div class="game">
+		<div class="hole hole1">
+			<div class="mole"></div>
+		</div>
+		<div class="hole hole2">
+			<div class="mole"></div>
+		</div>
+		<div class="hole hole3">
+			<div class="mole"></div>
+		</div>
+		<div class="hole hole4">
+			<div class="mole"></div>
+		</div>
+		<div class="hole hole5">
+			<div class="mole"></div>
+		</div>
+		<div class="hole hole6">
+			<div class="mole"></div>
+		</div>
+	</div>
+
+<script src="js/game.js"></script>
+
+</body>
+		
+</html>
