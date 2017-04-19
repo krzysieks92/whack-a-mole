@@ -130,7 +130,6 @@ btnNG.onclick = function(){
 //przycisk exit - wyjdz z gry, powodujacy zamkniecie sie okienek modal i powrot do strony startowej
 for (var key in exit) {
 	if (!exit.hasOwnProperty(key)) continue;
-	console.log(key, exit[key]);
    	exit[key].onclick = function(){
 		for (var i=0; i<modalAll.length; i++){
 			modalAll[i].style.display = "none";
@@ -170,7 +169,6 @@ playerName.onkeyup = function(){
 //po kliknieciu na mola inicjuje funcke bonk
 for (var ind in moles) {
 	if (!moles.hasOwnProperty(ind)) continue;
-	console.log(ind, moles[ind]);
    	moles[ind].onclick = function(e){
 		setTimeout(() => {
 	if(!e.isTrusted) return;
