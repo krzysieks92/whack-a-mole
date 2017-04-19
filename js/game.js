@@ -31,7 +31,7 @@ function startGame(){
 	result.textContent = 0;
 	timeUp = false;
 	peep();
-	setTimeout(() => {
+	setTimeout(function(){
 		timeUp = true;
 		if(timeUp === true){
 			game.style.display = "none";	
@@ -46,7 +46,7 @@ function peep (){
 	var hole = randomHole(holes);
 	hole.classList.add('up');
 
-	setTimeout(() => {
+	setTimeout(function(){
 		hole.classList.remove('up');
 		if(!timeUp) peep();	
 		}, time);
@@ -121,9 +121,9 @@ function resultsDisplay(){
 //przycisk rozpocznij gre, nacisniecie powoduje odtwarzanie dzwieku, pojawienie sie okienka do wpisania imienia oraz znikniecie przycisku rozpocznij gre
 btnNG.onclick = function(){
 	document.querySelector('.fanfares-sound').play();//odtwarzanie dzwieku
-	setTimeout(() => {
+	setTimeout(function(){
 		modal.style.display = "block";
-		this.style.display = "none";
+		btnNG.style.display = "none";
 	}, 400);	//utawienie czasu 400ms, po ktorym pojawia sie okno modal i znika przycisk rozpocznij gre
 }
 
@@ -170,10 +170,12 @@ playerName.onkeyup = function(){
 for (var ind in moles) {
 	if (!moles.hasOwnProperty(ind)) continue;
    	moles[ind].onclick = function(e){
-		setTimeout(() => {
+		setTimeout(function(){
 	if(!e.isTrusted) return;
 	score++;
-	this.classList.remove('up');
+	for(var i=0; i<moles.length; i++){
+		moles[i].classList.remove('up');	
+	}
 	document.querySelector('.whack-sound').play();
 	result.textContent = scoreBoard.textContent = score;
 }, time);
