@@ -138,12 +138,18 @@ btnNG.onclick = function(){
 }
 
 //przycisk exit - wyjdz z gry, powodujacy zamkniecie sie okienek modal i powrot do strony startowej
-exit.forEach(exit => exit.onclick = function(){
-	modalAll.forEach(modal => modal.style.display = "none");
-	btnNG.style.display = "block";
-	document.querySelector('.type').innerHTML = '';
-	scoreBoard.style.display = "none";
-})
+for (var key in exit) {
+	if (!exit.hasOwnProperty(key)) continue;
+	console.log(key, exit[key]);
+   	exit[key].onclick = function(){
+		for (var i=0; i<modalAll.length; i++){
+			modalAll[i].style.display = "none";
+			btnNG.style.display = "block";
+			document.querySelector('.type').innerHTML = '';
+			scoreBoard.style.display = "none";
+		}
+	}
+}
 
 //przycisk nowa gra, rozpoczyna nowa gre po zapisaniu wynikow
 btnNGR.onclick = function (){
@@ -172,8 +178,9 @@ playerName.onkeyup = function(){
 }
 
 //po kliknieciu na mola inicjuje funcke bonk
-moles.forEach(mole => mole.addEventListener('click', bonk));
-
+for (var ind in moles){
+	moles[ind}.onclick = bonk;	
+}
 
 
 
