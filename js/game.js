@@ -67,16 +67,6 @@ function randomHole(holes){
 	lastHole = hole;
 	return hole;	
 }
-
-//gdy klikniemy na mola powoduje odtwarzanie dzwieku, dodanie wyniku oraz usuniecie klasy up
-function bonk(e){
-	if(!e.isTrusted) return;
-	score++;
-	this.classList.remove('up');
-	document.querySelector('.whack-sound').play();
-	result.textContent = scoreBoard.textContent = score;
-}
-
 //powoduje ze po wczytaniu strony od nowa i zapisaniu gry mamy aktualna liste wynikow
 function init(){
 	if(localStorage.usersRecord){
@@ -178,8 +168,18 @@ playerName.onkeyup = function(){
 }
 
 //po kliknieciu na mola inicjuje funcke bonk
-for (var ind in moles){
-	moles[ind}.onclick = bonk;	
+for (var ind in moles) {
+	if (!moles.hasOwnProperty(ind)) continue;
+	console.log(ind, moles[ind]);
+   	moles[ind].onclick = function(e){
+		setTimeout(() => {
+	if(!e.isTrusted) return;
+	score++;
+	this.classList.remove('up');
+	document.querySelector('.whack-sound').play();
+	result.textContent = scoreBoard.textContent = score;
+}, time);
+}
 }
 
 
