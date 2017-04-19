@@ -20,7 +20,7 @@ var moles = document.querySelectorAll('.mole');
 var lastHole;
 var timeUp = false;
 var usersArray =[];
-
+var time = randomTime(200, 1000);
 //funkcje
 
 //rozpoczyna gre
